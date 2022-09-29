@@ -1,0 +1,11 @@
+.card-size {
+  height: 550px;
+}
+
+.add-btn {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  color: #33243d;
+}

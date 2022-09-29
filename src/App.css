@@ -31,34 +31,8 @@
 .Activity {
   position: sticky;
   top: 0;
-  width: 250px;
+  width: 100%;
   background-color: white;
-}
-
-@media screen and (max-width: 667px) {
-  .App {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    /* grid-template-columns: 4fr 1fr; */
-  }
-  .Home {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .logo-text {
-    color: #56ace0;
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  .App-logo {
-    height: 30px;
-  }
 }
 
 @media screen and (max-width: 912px) {
@@ -84,5 +58,38 @@
   }
   .App-logo {
     height: 60px;
+  }
+  .Activity {
+    position: sticky;
+    top: 0;
+    width: 95%;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* grid-template-columns: 4fr 1fr; */
+  }
+  .Home {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .logo-text {
+    color: #56ace0;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .App-logo {
+    height: 30px;
   }
 }
