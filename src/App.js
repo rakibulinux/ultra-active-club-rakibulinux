@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Activity from "./components/Home/Activity/Activity";
+import Home from "./components/Home/Home";
 
 function App() {
+  const [studies, setStudies] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setStudies(data));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <nav className="study-logo">
+          <img src="../../../public/study.png" alt="" />
+          <h1>Rakib Study Mart</h1>
+        </nav>
+        <div className="Home">
+          {studies.map((study) => (
+            <Home study={study} key={study.id}></Home>
+          ))}
+        </div>
+      </div>
+
+      <div className="Activity bg-gray-200">
+        <Activity></Activity>
+      </div>
     </div>
   );
 }
