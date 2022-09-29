@@ -64,7 +64,7 @@ function App() {
       </div>
 
       <div className="Activity bg-gray-200">
-        <Activity></Activity>
+        <Activity studies={studies}></Activity>
       </div>
     </div>
   );
