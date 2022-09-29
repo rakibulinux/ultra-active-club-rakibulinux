@@ -56,7 +56,14 @@ function App() {
           update the state values in the component.
         </p>
         <h2 className="text-2xl">UseEffect working area?</h2>
-        <p className="mt-2">UseEffect is the sideEffect of React.</p>
+        <p className="mt-2">
+          UseEffect is the sideEffect of React. By using this Hook, you tell
+          React that your component needs to do something after render. React
+          will remember the function you passed (we’ll refer to it as our
+          “effect”), and call it later after performing the DOM updates. In this
+          effect, we set the document title, but we could also perform data
+          fetching or call some other imperative API.
+        </p>
       </div>
     </div>
   );
