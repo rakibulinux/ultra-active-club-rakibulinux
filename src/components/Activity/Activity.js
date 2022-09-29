@@ -1,7 +1,7 @@
 import { faMapLocation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import profile from "../../../profile.jpg";
+import profile from "../../profile.jpg";
 import "./Activity.css";
 
 const Activity = () => {
@@ -39,21 +39,18 @@ const Activity = () => {
       <h2 className="mt-5 font-semibold text-lg text-black">Add A Break</h2>
       <div className="flex justify-center items-center mt-10 bg-gray-300 rounded-lg w-64 text-black font-semibold">
         <div className="p-2 flex gap-2">
-          <p className="bg-sky-500 rounded-full text-white p-1">
+          <button className="bg-sky-500 rounded-full text-white p-1">
             <span>20</span>d
-          </p>
-          <p className="bg-sky-500 rounded-full text-white p-1">
+          </button>
+          <button className="bg-sky-500 rounded-full text-white p-1">
             <span>20</span>d
-          </p>
-          <p className="bg-sky-500 rounded-full text-white p-1">
+          </button>
+          <button className="bg-sky-500 rounded-full text-white p-1">
             <span>20</span>d
-          </p>
-          <p className="bg-sky-500 rounded-full text-white p-1">
+          </button>
+          <button className="bg-sky-500 rounded-full text-white p-1">
             <span>20</span>d
-          </p>
-          <p className="bg-sky-500 rounded-full text-white p-1">
-            <span>20</span>d
-          </p>
+          </button>
         </div>
       </div>
       <h2 className="mt-5 font-semibold text-lg text-black">
@@ -72,11 +69,11 @@ const Activity = () => {
         <div className="p-2 flex flex-row justify-between mx-2 items-center">
           <p>Break time</p>
           <p className="text-gray-700">
-            <span>15</span> day
+            <span>200</span> days
           </p>
         </div>
       </div>
-      <button className="btn btn-accent mt-5">Activity Completed</button>
+      <button className="btn btn-accent my-5">Activity Completed</button>
     </div>
   );
 };

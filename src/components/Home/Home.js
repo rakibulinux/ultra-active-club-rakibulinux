@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 const Home = ({ study }) => {
-  console.log(study);
+  //   console.log(study);
   const { id, img, name, time, age } = study;
-
+  const [activity, setActivity] = useState([]);
+  console.log(activity);
+  const addExercise = () => {
+    const activityInfo = {
+      id,
+      time,
+    };
+    const newTime = [activityInfo];
+    setActivity(newTime);
+  };
   return (
     <div className="Home">
       <div className="card card-compact w-80 bg-base-100 shadow-xl card-size">
@@ -19,7 +28,12 @@ const Home = ({ study }) => {
             <span className="font-semibold">Time required:</span> {time} days
           </p>
           <div className="card-actions justify-center">
-            <button className="btn btn-accent add-btn">Add to List</button>
+            <button
+              onClick={() => addExercise(time)}
+              className="btn btn-accent add-btn"
+            >
+              Add to List
+            </button>
           </div>
         </div>
       </div>
