@@ -2,18 +2,24 @@ import React from "react";
 import "./Home.css";
 const Home = ({ study }) => {
   console.log(study);
+  const { id, img, name, time, age } = study;
 
   return (
     <div className="Home">
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact w-80 bg-base-100 shadow-xl">
         <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+          <img src={img} alt="Shoes" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="p-4">
+          <h2 className="card-title">{name}</h2>
+          <p>
+            <span className="font-semibold">For Age:</span> {age} years
+          </p>
+          <p>
+            <span className="font-semibold">Time required:</span> {time} days
+          </p>
+          <div className="card-actions justify-center">
+            <button className="btn btn-primary ">Add to List</button>
           </div>
         </div>
       </div>

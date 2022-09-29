@@ -2,19 +2,87 @@
   display: grid;
   grid-template-columns: 4fr 1fr;
 }
-.study-logo {
-  color: aqua;
-  font-weight: 900;
-  font-size: 42px;
-  margin-bottom: 40px;
-  margin-left: 40px;
+.Home-side {
+  width: 96%;
+  margin: auto;
 }
+.study-logo {
+  margin-top: 10px;
+  /* color: #ffc10d; */
+  font-weight: 900;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  color: #56ace0;
+  margin-left: 10px;
+  font-size: 52px;
+}
+
 .Home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
+  margin-bottom: 20px;
+  /* gap: 20px; */
 }
 
 .Activity {
+  position: sticky;
+  top: 0;
+  width: 250px;
   background-color: white;
+}
+
+@media screen and (max-width: 667px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* grid-template-columns: 4fr 1fr; */
+  }
+  .Home {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .logo-text {
+    color: #56ace0;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .App-logo {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* grid-template-columns: 4fr 1fr; */
+  }
+  .Home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .logo-text {
+    color: #56ace0;
+    margin-left: 10px;
+    font-size: 58px;
+  }
+  .App-logo {
+    height: 60px;
+  }
 }
