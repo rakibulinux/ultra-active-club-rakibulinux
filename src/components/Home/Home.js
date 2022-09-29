@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
 const Home = ({ study }) => {
-  //   console.log(study);
   const { id, img, name, time, age } = study;
   const [activity, setActivity] = useState([]);
   console.log(activity);

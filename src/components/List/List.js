@@ -41,16 +41,16 @@ const List = () => {
         <div className="flex justify-center items-center mt-10 bg-gray-300 rounded-lg w-64 text-black font-semibold">
           <div className="p-2 flex gap-2">
             <button className="bg-sky-500 rounded-full text-white p-1">
-              <span>20</span>d
+              <span>20</span> d
             </button>
             <button className="bg-sky-500 rounded-full text-white p-1">
-              <span>20</span>d
+              <span>30</span> d
             </button>
             <button className="bg-sky-500 rounded-full text-white p-1">
-              <span>20</span>d
+              <span>40</span> d
             </button>
             <button className="bg-sky-500 rounded-full text-white p-1">
-              <span>20</span>d
+              <span>50</span> d
             </button>
           </div>
         </div>
@@ -61,14 +61,17 @@ const List = () => {
         <div className="mt-10 bg-gray-300 rounded-lg w-64 text-black font-semibold">
           <div className="p-2 flex flex-row justify-between mx-2 items-center">
             <p>Exercise time</p>
-            <p className="text-gray-700">days</p>
+            <p className="text-gray-700">
+              {" "}
+              <span>0</span> days
+            </p>
           </div>
         </div>
         <div className="mt-10 bg-gray-300 rounded-lg w-64 text-black font-semibold">
           <div className="p-2 flex flex-row justify-between mx-2 items-center">
             <p>Break time</p>
             <p className="text-gray-700">
-              <span>200</span> days
+              <span>0</span> days
             </p>
           </div>
         </div>

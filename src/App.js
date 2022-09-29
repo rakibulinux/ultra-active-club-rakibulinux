@@ -64,7 +64,14 @@ function App() {
       </div>
 
       <div className="Activity bg-gray-200">
-        <Activity studies={studies}></Activity>
+        <Activity
+          activity={activity}
+          setActivity={activity}
+          studies={studies}
+        ></Activity>
+        {/* {studies.map((study) => (
+          <List study={study}></List>
+        ))} */}
       </div>
     </div>
   );
