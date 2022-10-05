@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
-const Home = ({ study }) => {
+const Home = ({ study, activity, setActivity }) => {
   const { id, img, name, time, age } = study;
-  const [activity, setActivity] = useState([]);
-  console.log(activity);
+  // const [activity, setActivity] = useState([]);
+  // console.log(activity);
   const addExercise = () => {
     const activityInfo = {
       id,
       time,
     };
-    const newTime = [activityInfo];
-    setActivity(newTime);
+    if (activityInfo) {
+      const newTime = [...activity, activityInfo];
+      setActivity(newTime);
+    }
   };
   return (
     <div className="Home">

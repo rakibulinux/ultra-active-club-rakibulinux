@@ -7,12 +7,14 @@ import logo from "./logo.svg";
 function App() {
   const [studies, setStudies] = useState([]);
   const [activity, setActivity] = useState([]);
+  // const [list, setList] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setStudies(data));
   }, []);
+  console.log(activity);
   return (
     <div className="App">
       <div className="Home-side">
@@ -29,7 +31,7 @@ function App() {
               study={study}
               key={study.id}
               activity={activity}
-              setActivity={activity}
+              setActivity={setActivity}
             ></Home>
           ))}
         </div>
@@ -66,7 +68,7 @@ function App() {
       <div className="Activity bg-gray-200">
         <Activity
           activity={activity}
-          setActivity={activity}
+          setActivity={setActivity}
           studies={studies}
         ></Activity>
         {/* {studies.map((study) => (
