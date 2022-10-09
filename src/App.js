@@ -7,8 +7,6 @@ import logo from "./logo.svg";
 function App() {
   const [studies, setStudies] = useState([]);
   const [activity, setActivity] = useState([]);
-  // const [list, setList] = useState([]);
-
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -71,9 +69,6 @@ function App() {
           setActivity={setActivity}
           studies={studies}
         ></Activity>
-        {/* {studies.map((study) => (
-          <List study={study}></List>
-        ))} */}
       </div>
     </div>
   );

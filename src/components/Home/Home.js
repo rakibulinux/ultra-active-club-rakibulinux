@@ -2,8 +2,6 @@ import React from "react";
 import "./Home.css";
 const Home = ({ study, activity, setActivity }) => {
   const { id, img, name, time, age } = study;
-  // const [activity, setActivity] = useState([]);
-  // console.log(activity);
   const addExercise = () => {
     const activityInfo = {
       id,
