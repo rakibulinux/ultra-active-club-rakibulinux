@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import profile from "../../profile.jpg";
 import "./Activity.css";
+import Swal from "sweetalert2";
 
 const Activity = ({ studies, activity }) => {
   const [breaktime, setBreakTime] = useState(0);
+  const handleAlart = () => {
+    Swal.fire("Good job!", "Activity Completed!", "success");
+  };
   let exerciseTime = 0;
   for (const exercise of activity) {
     exerciseTime = exerciseTime + exercise.time;
@@ -47,7 +51,12 @@ const Activity = ({ studies, activity }) => {
           {studies.map((study) => (
             <button
               key={study.id}
-              onClick={(e) => setBreakTime(e.target.innerText)}
+              onClick={(e) =>
+                setBreakTime(
+                  e.target.innerText,
+                  localStorage.setItem("breaktime", breaktime)
+                )
+              }
               className="bg-sky-500 rounded-full text-white p-1"
             >
               {study.time}
@@ -76,7 +85,9 @@ const Activity = ({ studies, activity }) => {
           </p>
         </div>
       </div>
-      <button className="btn btn-accent my-5">Activity Completed</button>
+      <button onClick={handleAlart} className="btn btn-accent my-5">
+        Activity Completed
+      </button>
     </div>
   );
 };
